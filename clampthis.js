@@ -1,3 +1,14 @@
+/*
+ CLAMPTHIS.JS
+
+ Version: 1.0.0
+  Author: Desmond Chin
+ Website: https://desmondchin.xyz
+    Repo: https://github.com/ClampThis/ClampThis
+  Issues: https://github.com/ClampThis/ClampThis/issues
+
+ */
+
 $clampThis = function(selector, uParams){
     lines = uParams.lines;
     params = {
@@ -25,7 +36,7 @@ $clampThis = function(selector, uParams){
         }else{
             lineHeight = parseInt(lineHeight)*params.defaultLineHeight;
         }
-        // var maxHeight = (parseInt(fontSize)*lines)+(lineHeight);
+
         var maxHeight = parseInt(lineHeight)*lines;
         console.log("one line= "+parseInt(lineHeight));
         console.log(maxHeight);
@@ -53,8 +64,4 @@ $clampThis = function(selector, uParams){
         }
     }
 }
-
-window.addEventListener('resize', function(event){
-    var allClamped = document.getElementsByClassName('_clampThis_clamped_');
-});
 
